@@ -1,0 +1,7 @@
+Archive: trixie
+Version: 1.0
+Component: main
+Origin: Abunta Project
+Label: Abunta Local Repository
+Architecture: amd64
+Description: Local APT repository for Abunta build system

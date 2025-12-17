@@ -1,0 +1,956 @@
+Package: apt
+Version: 3.1.12
+Architecture: amd64
+Maintainer: APT Development Team <deity@lists.debian.org>
+Installed-Size: 4632
+Depends: base-passwd (>= 3.6.1) | adduser, sqv (>= 1.3.0), libapt-pkg7.0 (>= 3.1.12), debian-archive-keyring, libc6 (>= 2.38), libgcc-s1 (>= 3.0), libseccomp2 (>= 2.4.2), libssl3t64 (>= 3.0.0), libstdc++6 (>= 13.1), libsystemd0
+Recommends: ca-certificates
+Suggests: apt-doc, aptitude | synaptic | wajig, dpkg-dev (>= 1.17.2), gnupg | gnupg2 | gnupg1, powermgmt-base
+Conflicts: apt-verify, libnettle8 (<< 3.9.1-2.2~)
+Breaks: apt-transport-https (<< 1.5~alpha4~), apt-utils (<< 1.3~exp2~), aptitude (<< 0.8.10)
+Replaces: apt-transport-https (<< 1.5~alpha4~), apt-utils (<< 1.3~exp2~)
+Provides: apt-transport-https (= 3.1.12)
+Priority: required
+Section: admin
+Filename: pool/main/a/apt/apt_3.1.12_amd64.deb
+Size: 1520288
+SHA256: 09cac73d161d3caf2ea4a883c4ddc2eef49542a33fae1b18db942ba8b7d05eab
+SHA1: dfe158f3d83a0e6c004b0777a719cd79bea608ad
+MD5sum: 050963137bd22ba60905988354680b1e
+Description: commandline package manager
+ This package provides commandline tools for searching and
+ managing as well as querying information about packages
+ as a low-level access to all features of the libapt-pkg library.
+ .
+ These include:
+  * apt-get for retrieval of packages and information about them
+    from authenticated sources and for installation, upgrade and
+    removal of packages together with their dependencies
+  * apt-cache for querying available information about installed
+    as well as installable packages
+  * apt-cdrom to use removable media as a source for packages
+  * apt-config as an interface to the configuration settings
+  * apt-extracttemplates is used by debconf to prompt for configuration
+    questions before installation.
+
+Package: btrfs-progs
+Version: 6.17.1-1
+Architecture: amd64
+Maintainer: Nicholas D Steeves <sten@debian.org>
+Installed-Size: 5204
+Depends: libblkid1 (>= 2.17.2), libc6 (>= 2.38), libcom-err2 (>= 1.43.9), libext2fs2t64 (>= 1.42), liblzo2-2 (>= 2.02), libudev1 (>= 183), libuuid1 (>= 2.16), libzstd1 (>= 1.5.5), zlib1g (>= 1:1.2.0)
+Suggests: duperemove
+Multi-Arch: foreign
+Homepage: http://btrfs.wiki.kernel.org/
+Priority: optional
+Section: admin
+Filename: pool/main/b/btrfs-progs/btrfs-progs_6.17.1-1_amd64.deb
+Size: 920164
+SHA256: 7cf17d33ec04ab45fa2bd27ef5b0a0020b7269814b720c78396b01f84f92416b
+SHA1: 5a5fc216127cf4353557f69d4e399d6717394bcc
+MD5sum: ccab1f6fe33e13c627f08d2684344103
+Description: Checksumming Copy on Write Filesystem utilities
+ Btrfs is a copy on write filesystem for Linux aimed at implementing
+ advanced features while focusing on fault tolerance, repair and easy
+ administration.
+ .
+ This package contains utilities (mkfs, fsck) used to work with btrfs
+ and an utility (btrfs-convert) to make a btrfs filesystem from an ext3.
+
+Package: cmake
+Version: 4.2.1-1
+Architecture: amd64
+Maintainer: Debian CMake Team <pkg-cmake-team@lists.alioth.debian.org>
+Installed-Size: 44307
+Depends: cmake-data (= 4.2.1-1), procps, libarchive13t64 (>= 3.3.3), libc6 (>= 2.38), libcurl4t64 (>= 7.16.2), libexpat1 (>= 2.0.1), libgcc-s1 (>= 3.0), libjsoncpp26 (>= 1.9.6), librhash1 (>= 1.2.6), libstdc++6 (>= 14), libuv1t64 (>= 1.38.0), zlib1g (>= 1:1.1.4)
+Recommends: gcc, make
+Suggests: cmake-doc, cmake-format, elpa-cmake-mode, ninja-build
+Multi-Arch: foreign
+Homepage: https://cmake.org/
+Priority: optional
+Section: devel
+Filename: pool/main/c/cmake/cmake_4.2.1-1_amd64.deb
+Size: 13025376
+SHA256: 13dc4a9ae1d2a967a6836864719aec5adc5ebb084ba638cf4fb42aa058a27cd0
+SHA1: 846779ec3d9e2d8a39b466dc71c15f96475c6af4
+MD5sum: 606f5a09a3c4b8663198a0a74ad9609f
+Description: cross-platform, open-source make system
+ CMake is used to control the software compilation process using
+ simple platform and compiler independent configuration files. CMake
+ generates native makefiles and workspaces that can be used in the
+ compiler environment of your choice. CMake is quite sophisticated: it
+ is possible to support complex environments requiring system
+ configuration, pre-processor generation, code generation, and template
+ instantiation.
+
+Package: coreutils
+Version: 9.7-3
+Architecture: amd64
+Essential: yes
+Maintainer: Michael Stone <mstone@debian.org>
+Installed-Size: 18457
+Pre-Depends: libacl1 (>= 2.2.23), libattr1 (>= 1:2.4.48), libc6 (>= 2.38), libcap2 (>= 1:2.10), libgmp10 (>= 2:6.3.0+dfsg), libselinux1 (>= 3.1~), libssl3t64 (>= 3.0.0), libsystemd0 (>= 254)
+Multi-Arch: foreign
+Homepage: https://gnu.org/software/coreutils
+Priority: required
+Section: utils
+Filename: pool/main/c/coreutils/coreutils_9.7-3_amd64.deb
+Size: 3023556
+SHA256: 1299ab6f9389a288eb2f5f3dd222c26cc777b9a2d5ecb6ee4cbd340cebcdada2
+SHA1: b030cfa538f5265585eb5d8a08af1cc65d855dab
+MD5sum: 4a48f61cc5b86a87f14b3d2045c9870f
+Description: GNU core utilities
+ This package contains the basic file, shell and text manipulation
+ utilities which are expected to exist on every operating system.
+ .
+ Specifically, this package includes:
+ arch base64 basename cat chcon chgrp chmod chown chroot cksum comm cp
+ csplit cut date dd df dir dircolors dirname du echo env expand expr
+ factor false flock fmt fold groups head hostid id install join link ln
+ logname ls md5sum mkdir mkfifo mknod mktemp mv nice nl nohup nproc numfmt
+ od paste pathchk pinky pr printenv printf ptx pwd readlink realpath rm
+ rmdir runcon sha*sum seq shred sleep sort split stat stty sum sync tac
+ tail tee test timeout touch tr true truncate tsort tty uname unexpand
+ uniq unlink users vdir wc who whoami yes
+
+Package: curl
+Version: 8.18.0~rc1-1+exp1
+Architecture: amd64
+Maintainer: Debian Curl Maintainers <team+curl@tracker.debian.org>
+Installed-Size: 505
+Depends: libcurl4t64 (= 8.18.0~rc1-1+exp1), libc6 (>= 2.34), zlib1g (>= 1:1.1.4)
+Recommends: bash-completion
+Multi-Arch: foreign
+Homepage: https://curl.se/
+Priority: optional
+Section: web
+Filename: pool/main/c/curl/curl_8.18.0~rc1-1+exp1_amd64.deb
+Size: 280560
+SHA256: ae9d3e84822ba95abd95cb159a040a8d618677fae1d3752ec902c673f949c710
+SHA1: 4017db5e3e4b1c5aa545f4e34f42cd1a090ff2a3
+MD5sum: f9bfaa307076f3449c2901f64e09e6e6
+Description: command line tool for transferring data with URL syntax
+ curl is a command line tool for transferring data with URL syntax, supporting
+ DICT, FILE, FTP, FTPS, GOPHER, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, POP3,
+ POP3S, RTMP, RTSP, SCP, SFTP, SMTP, SMTPS, TELNET and TFTP.
+ .
+ curl supports SSL certificates, HTTP POST, HTTP PUT, FTP uploading, HTTP form
+ based upload, proxies, cookies, user+password authentication (Basic, Digest,
+ NTLM, Negotiate, kerberos...), file transfer resume, proxy tunneling and a
+ busload of other useful tricks.
+
+Package: debootstrap
+Version: 1.0.142
+Architecture: all
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Installed-Size: 330
+Depends: wget, distro-info
+Recommends: sopv | sqv | gpgv, mount, debian-archive-keyring, arch-test (>= 0.11~)
+Suggests: squid-deb-proxy-client, ubuntu-archive-keyring, binutils, xz-utils, zstd
+Multi-Arch: foreign
+Priority: optional
+Section: admin
+Filename: pool/main/d/debootstrap/debootstrap_1.0.142_all.deb
+Size: 50760
+SHA256: 61a102bbf128c2bea51e3b7fa6796990b4bccaef8e1e55a950185c6de4582e13
+SHA1: c4e6ad1cb3ab8d0b63a154d0d7bd4d40769272a3
+MD5sum: 494a9dfadd456ccf8c0fa95c44063c4e
+Description: Bootstrap a basic Debian system
+ debootstrap is used to create a Debian base system from scratch,
+ without requiring the availability of dpkg or apt. It does this by
+ downloading .deb files from a mirror site, and carefully unpacking them
+ into a directory which can eventually be chrooted into.
+
+Package: dpkg
+Version: 1.22.21
+Architecture: amd64
+Essential: yes
+Maintainer: Dpkg Developers <debian-dpkg@lists.debian.org>
+Installed-Size: 6587
+Pre-Depends: libbz2-1.0, libc6 (>= 2.38), liblzma5 (>= 5.4.0), libmd0 (>= 0.0.0), libselinux1 (>= 3.1~), libzstd1 (>= 1.5.5), zlib1g (>= 1:1.1.4)
+Depends: tar (>= 1.28-1)
+Suggests: apt, debsig-verify
+Breaks: libapt-pkg5.0 (<< 1.7~b), lsb-base (<< 10.2019031300)
+Multi-Arch: foreign
+Homepage: https://wiki.debian.org/Teams/Dpkg
+Priority: required
+Section: admin
+Filename: pool/main/d/dpkg/dpkg_1.22.21_amd64.deb
+Size: 1537532
+SHA256: 9e32659cee54af2b972491ea63e2eff5b56700c4ddcb1f11163c5e772d6f380e
+SHA1: 22392fb19e414969754dccafd7d52a39169d2248
+MD5sum: 917460af8bd3d5a5c592cf002e34259d
+Description: Debian package management system
+ This package provides the low-level infrastructure for handling the
+ installation and removal of Debian software packages.
+ .
+ For Debian package development tools, install dpkg-dev.
+
+Package: emacs
+Version: 1:30.2+1-2
+Architecture: all
+Maintainer: Rob Browning <rlb@defaultvalue.org>
+Installed-Size: 54
+Depends: emacs-gtk (>= 1:30.1) | emacs-pgtk (>= 1:30.1) | emacs-lucid (>= 1:30.1) | emacs-nox (>= 1:30.1)
+Homepage: https://www.gnu.org/software/emacs/
+Priority: optional
+Section: editors
+Filename: pool/main/e/emacs/emacs_30.2+1-2_all.deb
+Size: 19848
+SHA256: bb1a54cb318b0d0adf1402ac89e99ac59cc89889bd8e4e0befb96033215e392b
+SHA1: 41612ac8bad1d8d8bc2683ace6324787c44edc9c
+MD5sum: 2323812c714cc6827a3f6a0f7dd78fd0
+Description: GNU Emacs editor (metapackage)
+ GNU Emacs is the extensible self-documenting text editor.
+ This is a metapackage that will always depend on the latest
+ recommended Emacs variant (currently emacs-gtk).
+
+Package: gcc-13
+Version: 13.4.0-4
+Architecture: amd64
+Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Installed-Size: 569
+Depends: gcc-13-x86-64-linux-gnu (= 13.4.0-4), gcc-13-base (= 13.4.0-4), cpp-13 (= 13.4.0-4), binutils (>= 2.39)
+Recommends: libc6-dev (>= 2.23-1~)
+Suggests: gcc-13-multilib, gcc-13-doc (>= 13), gcc-13-locales (>= 13)
+Replaces: cpp-13 (<< 7.1.1-8)
+Provides: c-compiler
+Homepage: http://gcc.gnu.org/
+Priority: optional
+Section: devel
+Filename: pool/main/g/gcc-13/gcc-13_13.4.0-4_amd64.deb
+Size: 514640
+SHA256: d36de3dc0787d709b0acbe086a2adb06ec5c4ff2524052e81952478466053327
+SHA1: f94d252bfec118e7b234a32c8cb0e73953dcb0d4
+MD5sum: b270b30a874afe2f9c6db88c8da0ba8a
+Description: GNU C compiler
+ This is the GNU C compiler, a fairly portable optimizing compiler for C.
+
+Package: gcc-13-base
+Source: gcc-13
+Version: 13.4.0-4
+Architecture: amd64
+Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Installed-Size: 112
+Breaks: gnat (<< 7)
+Multi-Arch: same
+Homepage: http://gcc.gnu.org/
+Priority: optional
+Section: libs
+Filename: pool/main/g/gcc-13/gcc-13-base_13.4.0-4_amd64.deb
+Size: 50120
+SHA256: 4ac73a02cc1975d766e306fd6b8c0b55c46a0c8ace682924b11a806a870b4dea
+SHA1: dcbe4271f75481e8773640d09f050cf650f60446
+MD5sum: 47c0dc27ca2ad6f9649268d8f67cbfc1
+Description: GCC, the GNU Compiler Collection (base package)
+ This package contains files common to all languages and libraries
+ contained in the GNU Compiler Collection (GCC).
+
+Package: gdb
+Version: 17.0.90-1~exp2
+Architecture: amd64
+Maintainer: Debian GDB Team <team+gdb@tracker.debian.org>
+Installed-Size: 12479
+Depends: libbabeltrace1 (>= 1.5.4), libc6 (>= 2.38), libdebuginfod1t64 (>= 0.188), libexpat1 (>= 2.0.1), libgcc-s1 (>= 4.2), libgmp10 (>= 2:6.3.0+dfsg), libipt2 (>= 2.0), liblzma5 (>= 5.1.1alpha+20110809), libmpfr6 (>= 3.1.3), libncursesw6 (>= 6), libpython3.13 (>= 3.13.0~rc3), libreadline8t64 (>= 8.2~beta), libsource-highlight4t64 (>= 3.1.9), libstdc++6 (>= 14), libtinfo6 (>= 6), libxxhash0 (>= 0.6.5), libzstd1 (>= 1.5.5), zlib1g (>= 1:1.2.11.dfsg)
+Suggests: gdb-doc, gdbserver, libc-dbg
+Breaks: gdb-minimal (<< 15.2-2~exp1)
+Replaces: gdb-minimal (<< 15.2-2~exp1)
+Provides: gdb-minimal
+Homepage: https://www.gnu.org/s/gdb/
+Priority: optional
+Section: devel
+Filename: pool/main/g/gdb/gdb_17.0.90-1~exp2_amd64.deb
+Size: 4081976
+SHA256: 8d0d0c03a08c7596d8ddc0a88f1059b8d4b174d1070305e88b8f37f5886006e7
+SHA1: 7439c7fdadee75c5084703e75746323e94052ea0
+MD5sum: 569f16bafa7c1738e2a775656817d477
+Description: GNU Debugger
+ GDB is a source-level debugger, capable of breaking programs at
+ any specific line, displaying variable values, and determining
+ where errors occurred. Currently, gdb supports C, C++, D,
+ Objective-C, Fortran, Java, OpenCL C, Pascal, assembly, Modula-2,
+ Go, and Ada. A must-have for any serious programmer.
+
+Package: grub-common
+Source: grub2
+Version: 2.14~git20250718.0e36779-2
+Architecture: amd64
+Maintainer: GRUB Maintainers <pkg-grub-devel@alioth-lists.debian.net>
+Installed-Size: 12
+Depends: grub2-common (= 2.14~git20250718.0e36779-2)
+Multi-Arch: foreign
+Homepage: https://www.gnu.org/software/grub/
+Priority: optional
+Section: admin
+Filename: pool/main/g/grub2/grub-common_2.14~git20250718.0e36779-2_amd64.deb
+Size: 2376
+SHA256: f3b1626addbdfc9f568deda777a0c45c0c76988f09d020a3392b31351de03702
+SHA1: 1222cc94578c461e1b7a428ea4a436bf9e54e193
+MD5sum: 4a66c82f5fb80255322742fe8bdd88d5
+Description: GRand Unified Bootloader, version 2 (dummy package)
+ This is a dummy transitional package that depends on grub2-common.
+ It can be safely removed.
+
+Package: grub-efi-amd64
+Source: grub2
+Version: 2.14~git20250718.0e36779-2
+Architecture: amd64
+Maintainer: GRUB Maintainers <pkg-grub-devel@alioth-lists.debian.net>
+Installed-Size: 142
+Depends: debconf (>= 0.5) | debconf-2.0, grub-efi-amd64-bin (= 2.14~git20250718.0e36779-2), grub2-common (= 2.14~git20250718.0e36779-2), ucf
+Conflicts: elilo, grub, grub-coreboot, grub-efi-ia32, grub-ieee1275, grub-legacy, grub-pc, grub-xen
+Replaces: grub, grub-coreboot, grub-efi-ia32, grub-ieee1275, grub-legacy, grub-pc, grub2 (<< 2.14~git20250718.0e36779-2)
+Multi-Arch: foreign
+Homepage: https://www.gnu.org/software/grub/
+Priority: optional
+Section: admin
+Filename: pool/main/g/grub2/grub-efi-amd64_2.14~git20250718.0e36779-2_amd64.deb
+Size: 42872
+SHA256: 5924d4d66714bc5a0e560f306d016c3a67c50580693e5b78d4b6deb9951f0eef
+SHA1: 25d249985deafe63bc2501485306b27ed29e3bd8
+MD5sum: 5cd0be5a7a5edfac601d13dc6b7d47bb
+Description: GRand Unified Bootloader, version 2 (EFI-AMD64 version)
+ GRUB is a portable, powerful bootloader.  This version of GRUB is based on a
+ cleaner design than its predecessors, and provides the following new features:
+ .
+  - Scripting in grub.cfg using BASH-like syntax.
+  - Support for modern partition maps such as GPT.
+  - Modular generation of grub.cfg via update-grub.  Packages providing GRUB
+    add-ons can plug in their own script rules and trigger updates by invoking
+    update-grub.
+ .
+ This is a dependency package for a version of GRUB that has been built for
+ use with the EFI-AMD64 architecture, as used by Intel Macs (unless a BIOS
+ interface has been activated).  Installing this package indicates that this
+ version of GRUB should be the active boot loader.
+
+Package: grub2
+Version: 2.14~git20250718.0e36779-2
+Architecture: amd64
+Maintainer: GRUB Maintainers <pkg-grub-devel@alioth-lists.debian.net>
+Installed-Size: 12
+Depends: grub-pc (= 2.14~git20250718.0e36779-2), grub2-common (= 2.14~git20250718.0e36779-2)
+Multi-Arch: foreign
+Homepage: https://www.gnu.org/software/grub/
+Priority: optional
+Section: oldlibs
+Filename: pool/main/g/grub2/grub2_2.14~git20250718.0e36779-2_amd64.deb
+Size: 2380
+SHA256: 94f94740cde03cb60f8a88488533d806f76a769821656ddf91fb9a210148fa5a
+SHA1: e515ce3a0fa32a757b3d1e0227273a2754c9e461
+MD5sum: 9882931d8fc3b1a9e20c6bb8e82e37b1
+Description: GRand Unified Bootloader, version 2 (dummy package)
+ This is a dummy transitional package to handle GRUB 2 upgrades.  It can be
+ safely removed.
+
+Package: gzip
+Version: 1.14-1~exp2
+Architecture: amd64
+Essential: yes
+Maintainer: Milan Kupcevic <milan@debian.org>
+Installed-Size: 258
+Pre-Depends: libc6 (>= 2.38)
+Suggests: less
+Conflicts: zutils (<< 1.13-2~)
+Homepage: https://www.gnu.org/software/gzip/
+Priority: required
+Section: utils
+Filename: pool/main/g/gzip/gzip_1.14-1~exp2_amd64.deb
+Size: 147368
+SHA256: ead8bf186a9903a4d9abd1f3b837972a1b007997b97b90df04b9774f1614cb43
+SHA1: 556ea4342acb8dc0fad2968229fe54b60570f72f
+MD5sum: 4cec3f114db089876e782d435db09e6c
+Description: GNU compression utilities
+ This package provides the standard GNU file compression utilities, which
+ are also the default compression tools for Debian.  They typically operate
+ on files with names ending in '.gz', but can also decompress files ending
+ in '.Z' created with 'compress'.
+
+Package: iproute2
+Version: 6.18.0-1
+Architecture: amd64
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Installed-Size: 3901
+Depends: debconf (>= 0.5) | debconf-2.0, libbpf1 (>= 1:0.6.0), libc6 (>= 2.38), libcap2 (>= 1:2.10), libdb5.3t64, libelf1t64 (>= 0.131), libmnl0 (>= 1.0.3-4~), libselinux1 (>= 3.1~), libtirpc3t64 (>= 1.0.2), libxtables12 (>= 1.6.0+snapshot20161117), libcap2-bin
+Suggests: python3:any
+Conflicts: arpd
+Breaks: iproute2-doc
+Replaces: iproute2-doc
+Provides: arpd
+Multi-Arch: foreign
+Homepage: https://wiki.linuxfoundation.org/networking/iproute2
+Priority: important
+Section: net
+Filename: pool/main/i/iproute2/iproute2_6.18.0-1_amd64.deb
+Size: 1114456
+SHA256: 48312ed45dee72081c71f73a35697c5451aceec3321c76536ede95fa0c9025db
+SHA1: 89b7be3731d7eb7170916a760325d89a55f29fe1
+MD5sum: c13e3f211d5550a4a6b27376e009cffa
+Description: networking and traffic control tools
+ The iproute2 suite is a collection of utilities for networking and
+ traffic control.
+ .
+ These tools communicate with the Linux kernel via the (rt)netlink
+ interface, providing advanced features not available through the
+ legacy net-tools commands 'ifconfig' and 'route'.
+
+Package: libqt6core6
+Source: qt6-base
+Version: 6.4.2+dfsg-10
+Architecture: amd64
+Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Installed-Size: 5556
+Depends: shared-mime-info, libb2-1 (>= 0.98.1), libc6 (>= 2.35), libdouble-conversion3 (>= 2.0.0), libgcc-s1 (>= 3.4), libglib2.0-0 (>= 2.26.0), libicu72 (>= 72.1~rc-1~), libpcre2-16-0 (>= 10.22), libstdc++6 (>= 12), libzstd1 (>= 1.5.2), zlib1g (>= 1:1.2.0)
+Recommends: qt6-translations-l10n
+Provides: qt6-base-abi (= 6.4.2)
+Multi-Arch: same
+Homepage: https://www.qt.io/developers/
+Priority: optional
+Section: libs
+Filename: pool/main/q/qt6-base/libqt6core6_6.4.2+dfsg-10_amd64.deb
+Size: 1613068
+SHA256: 2849e8e686c3f7a1b60ad30373b64d6be33003f4b80953eacf331901c20beeb7
+SHA1: 4f638e7627802eb445b525bfd85a9019f6dbbb57
+MD5sum: 31f9fba391c6c6c134533c286b225ff4
+Description: Qt 6 core module
+ Qt is a cross-platform C++ application framework. Qt's primary feature
+ is its rich set of widgets that provide standard GUI functionality.
+ .
+ The QtCore module contains core non-GUI functionality.
+
+Package: linux-image-rt-amd64
+Source: linux
+Version: 6.18~rc7-1~exp1
+Architecture: amd64
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Installed-Size: 13
+Depends: linux-base-rt-amd64 (= 6.18~rc7-1~exp1), linux-image-6.18-rt-amd64 (= 6.18~rc7-1~exp1)
+Provides: linux-latest-modules-6.18-rt-amd64, virtualbox-guest-modules, wireguard-modules (= 1.0.0)
+Homepage: https://www.kernel.org/
+Priority: optional
+Section: kernel
+Filename: pool/main/l/linux/linux-image-rt-amd64_6.18~rc7-1~exp1_amd64.deb
+Size: 1468
+SHA256: 24d7e72cba0cec368d5370e7c64cdd1d512c0b8bd89590e0b08040b52492d9d3
+SHA1: db42bdf2ac79d6cd7bb1f4e897841daa76acc44d
+MD5sum: 85c9a148f5d91938545798a567ec9062
+Description: Linux for 64-bit PCs (meta-package)
+ This package depends on the latest Linux kernel and modules for use on PCs
+ with AMD64, Intel 64 or VIA Nano processors.
+
+Package: live-build
+Version: 1:20250814
+Architecture: all
+Maintainer: Debian Live <debian-live@lists.debian.org>
+Installed-Size: 801
+Depends: cpio, debootstrap
+Recommends: apt-utils, bzip2, cryptsetup, file, live-boot-doc, live-config-doc, live-manual-html | live-manual, rsync, systemd-container, wget, xz-utils
+Suggests: e2fsprogs, eatmydata, git, mtd-utils, parted
+Homepage: https://wiki.debian.org/DebianLive
+Priority: optional
+Section: misc
+Filename: pool/main/l/live-build/live-build_20250814_all.deb
+Size: 205200
+SHA256: a4bffb8e6436ffba260f2e1c37be9dd04a4dacf52c38d7bbe454ec826ba52a4b
+SHA1: c444b4fbdfeeab7f5b24507294bb60fe477d7af7
+MD5sum: cb54a3455e76fded09b6bf67cbd2449a
+Description: Live System Build Components
+ The Debian Live project maintains the components to build Debian based Live
+ systems and the official Debian Live images themselves.
+ .
+ live-build contains the components to build a live system from a configuration
+ directory.
+
+Package: lvm2
+Version: 2.03.31-2
+Architecture: amd64
+Maintainer: Debian LVM Team <team+lvm@tracker.debian.org>
+Installed-Size: 4020
+Depends: libaio1t64 (>= 0.3.93), libblkid1 (>= 2.24.2), libc6 (>= 2.38), libdevmapper-event1.02.1 (>= 2:1.02.74), libedit2 (>= 2.11-20080614-0), libselinux1 (>= 3.1~), libsystemd0 (>= 233), libudev1 (>= 183), dmsetup (>= 2:1.02.205-2~), dmeventd (>= 2:1.02.205-2~)
+Recommends: thin-provisioning-tools
+Multi-Arch: foreign
+Homepage: https://sourceware.org/lvm2/
+Priority: optional
+Section: admin
+Filename: pool/main/l/lvm2/lvm2_2.03.31-2_amd64.deb
+Size: 1287460
+SHA256: a6a130eae69ec2ede92b2bf4bfab35208a5340c2c3e2dcb4453bf8fbf742d0a6
+SHA1: 4209f0a6bf6db62dad2ed1a4114764dba051cb59
+MD5sum: 7a9a2a507f05a5bd56db2c4fa157454b
+Description: Linux Logical Volume Manager
+ This is LVM2, the rewrite of The Linux Logical Volume Manager.  LVM
+ supports enterprise level volume management of disk and disk subsystems
+ by grouping arbitrary disks into volume groups. The total capacity of
+ volume groups can be allocated to logical volumes, which are accessed as
+ regular block devices.
+
+Package: make
+Source: make-dfsg
+Version: 4.4.1-3
+Architecture: amd64
+Maintainer: Stephen Kitt <skitt@debian.org>
+Installed-Size: 1762
+Depends: libc6 (>= 2.38)
+Suggests: make-doc
+Conflicts: make-guile
+Replaces: make-guile
+Multi-Arch: allowed
+Homepage: https://www.gnu.org/software/make/
+Priority: optional
+Section: devel
+Filename: pool/main/m/make-dfsg/make_4.4.1-3_amd64.deb
+Size: 463236
+SHA256: 5bebcf4afc4af6812605f35cd49de042cf8c6185918200bfbf99c3f2c1b0fbb2
+SHA1: caa7cdd84e4f195b97ade394373a7602c259a6c8
+MD5sum: 0910c5e508dfb104e31954f52910f2b7
+Description: utility for directing compilation
+ GNU Make is a utility which controls the generation of executables
+ and other target files of a program from the program's source
+ files. It determines automatically which pieces of a large program
+ need to be (re)created, and issues the commands to (re)create
+ them. Make can be used to organize any task in which targets (files)
+ are to be automatically updated based on input files whenever the
+ corresponding input is newer --- it is not limited to building
+ computer programs. Indeed, Make is a general purpose dependency
+ solver.
+
+Package: musl
+Version: 1.2.5-3
+Architecture: amd64
+Maintainer: Reiner Herrmann <reiner@reiner-h.de>
+Installed-Size: 802
+Multi-Arch: same
+Homepage: https://musl.libc.org/
+Priority: optional
+Section: libs
+Filename: pool/main/m/musl/musl_1.2.5-3_amd64.deb
+Size: 427468
+SHA256: 4288deaf14438e6c237491be45f10e3e7badb2e723cedfb08ff1fe687b646c84
+SHA1: 474e52ef888d686c31c16a0c62a3295ccfcf0320
+MD5sum: 5a485c4dcc102a116198a8044e7489aa
+Description: standard C library
+ musl is lightweight, fast, simple, free and strives
+ to be correct in the sense of standards-conformance
+ and safety.
+ .
+ This package contains the shared objects
+
+Package: nano
+Version: 8.7-1
+Architecture: amd64
+Maintainer: Jordi Mallach <jordi@debian.org>
+Installed-Size: 2848
+Depends: libc6 (>= 2.38), libncursesw6 (>= 6), libtinfo6 (>= 6)
+Suggests: hunspell
+Conflicts: pico
+Breaks: nano-tiny (<< 2.8.6-2)
+Replaces: nano-tiny (<< 2.8.6-2), pico
+Homepage: https://www.nano-editor.org/
+Priority: important
+Section: editors
+Filename: pool/main/n/nano/nano_8.7-1_amd64.deb
+Size: 653180
+SHA256: 9b141c870e54523a712cbff4f41aa232356532468fe64413d882c9b935f27909
+SHA1: f25aa3e312554479d20ca15cc3b640f3207bc577
+MD5sum: 0a64efbff050678a14e1b9c06784cafe
+Description: small, friendly text editor inspired by Pico
+ GNU nano is an easy-to-use text editor originally designed as a replacement
+ for Pico, the ncurses-based editor from the non-free mailer package Pine
+ (itself now available under the Apache License as Alpine).
+ .
+ However, GNU nano also implements many features missing in Pico, including:
+  - undo/redo
+  - line numbering
+  - syntax coloring
+  - soft-wrapping of overlong lines
+  - selecting text by holding Shift
+  - interactive search and replace (with regular expression support)
+  - a go-to line (and column) command
+  - support for multiple file buffers
+  - auto-indentation
+  - tab completion of filenames and search terms
+  - toggling features while running
+  - and full internationalization support
+
+Package: network-manager
+Version: 1.54.2-2
+Architecture: amd64
+Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Installed-Size: 7781
+Depends: libaudit1 (>= 1:2.2.1), libbluetooth3 (>= 5), libc6 (>= 2.38), libcurl3t64-gnutls (>= 7.24.0), libglib2.0-0t64 (>= 2.58.0), libgnutls30t64 (>= 3.7.2), libjansson4 (>= 2.14), libmm-glib0 (>= 1.10.0), libndp0 (>= 1.2), libnewt0.52 (>= 0.52.25), libnm0 (= 1.54.2-2), libpsl5t64 (>= 0.13.0), libreadline8t64 (>= 6.0), libselinux1 (>= 3.1~), libsystemd0 (>= 209), libteamdctl0 (>= 1.9), libudev1 (>= 183), default-dbus-system-bus | dbus-system-bus, adduser
+Recommends: ppp, dnsmasq-base, modemmanager, wireless-regdb, wpasupplicant, libpam-systemd, polkitd, udev, network-manager-l10n
+Suggests: libteam-utils, iptables
+Breaks: ppp (>= 2.5.2-2~), ppp (<< 2.5.2-1+~)
+Homepage: https://networkmanager.dev/
+Priority: optional
+Section: net
+Filename: pool/main/n/network-manager/network-manager_1.54.2-2_amd64.deb
+Size: 2276264
+SHA256: 9ec279dbd3539f879e02222dd7c1682bdb933a426d3cea2afd9f04daaf675548
+SHA1: a9bff27375580ccb77ea3dd22348f07129688643
+MD5sum: 21d3cb2b7abe1bf45715dd105b069a85
+Description: network management framework (daemon and userspace tools)
+ NetworkManager is a system network service that manages your network devices
+ and connections, attempting to keep active network connectivity when
+ available. It manages ethernet, Wi-Fi, mobile broadband (WWAN), and PPPoE
+ devices, and provides VPN integration with a variety of different VPN
+ services.
+ .
+ This package provides the userspace daemons and a command line interface to
+ interact with NetworkManager.
+ .
+ Optional dependencies:
+  * ppp: Required for establishing dial-up connections (e.g. via GSM).
+  * dnsmasq-base/iptables: Required for creating Ad-hoc connections and
+    connection sharing.
+  * libteam-utils: Network Team driver allows multiple network interfaces to be
+    teamed together and act like a single one. This process is called "ethernet
+    bonding", "channel teaming" or "link aggregation".
+
+Package: openssl
+Version: 3.6.0-1
+Architecture: amd64
+Maintainer: Debian OpenSSL Team <pkg-openssl-devel@alioth-lists.debian.net>
+Installed-Size: 2519
+Depends: libc6 (>= 2.38), libssl3t64 (>= 3.6.0~~beta1)
+Suggests: ca-certificates
+Multi-Arch: foreign
+Homepage: https://openssl-library.org
+Priority: optional
+Section: utils
+Filename: pool/main/o/openssl/openssl_3.6.0-1_amd64.deb
+Size: 1510552
+SHA256: c91b8412740f004a55b7c7078725969298b1bca81e7e5c07cb31208863a2b679
+SHA1: 0dff7958bb6a0e47a29604785827b6d253a214ea
+MD5sum: ca4f4dfbf74923e1bed712b0e8a0569c
+Description: Secure Sockets Layer toolkit - cryptographic utility
+ This package is part of the OpenSSL project's implementation of the SSL
+ and TLS cryptographic protocols for secure communication over the
+ Internet.
+ .
+ It contains the general-purpose command line binary /usr/bin/openssl,
+ useful for cryptographic operations such as:
+  * creating RSA, DH, and DSA key parameters;
+  * creating X.509 certificates, CSRs, and CRLs;
+  * calculating message digests;
+  * encrypting and decrypting with ciphers;
+  * testing SSL/TLS clients and servers;
+  * handling S/MIME signed or encrypted mail.
+
+Package: passwd
+Source: shadow
+Version: 1:4.18.0-2
+Architecture: amd64
+Maintainer: Shadow package maintainers <pkg-shadow-devel@lists.alioth.debian.org>
+Installed-Size: 4787
+Depends: base-passwd (>= 3.6.4), libpam-modules, login.defs, libacl1 (>= 2.2.23), libattr1 (>= 1:2.4.44), libaudit1 (>= 1:2.2.1), libbsd0 (>= 0.11.0), libc6 (>= 2.38), libcrypt1 (>= 1:4.1.0), libpam0g (>= 0.99.7.1), libselinux1 (>= 3.1~), libsemanage2 (>= 2.0.32)
+Recommends: sensible-utils
+Replaces: login (<< 1:4.16.0-2~)
+Multi-Arch: foreign
+Homepage: https://github.com/shadow-maint/shadow
+Priority: required
+Section: admin
+Filename: pool/main/s/shadow/passwd_4.18.0-2_amd64.deb
+Size: 1286136
+SHA256: 00ffe18853428846f5d305e7509146a63216611621ca4d1a3dfd4fa4fd51f827
+SHA1: b2d0c1a6b5faa9ecaffd87e70e2fee44abc8190b
+MD5sum: 4f6ed1dcf7f665ac97e281f24ce195ed
+Description: change and administer password and group data
+ This package includes passwd, chsh, chfn, and many other programs to
+ maintain password and group data.
+ .
+ Shadow passwords are supported.  See /usr/share/doc/passwd/README.Debian
+
+Package: perl
+Version: 5.42.0-3
+Architecture: amd64
+Maintainer: Niko Tyni <ntyni@debian.org>
+Installed-Size: 839
+Depends: perl-base (= 5.42.0-3), perl-modules-5.42 (>= 5.42.0-3), libperl5.42 (= 5.42.0-3)
+Recommends: netbase
+Suggests: perl-doc, libterm-readline-gnu-perl | libterm-readline-perl-perl, make, libtap-harness-archive-perl
+Conflicts: libjson-pp-perl (<< 2.27200-2)
+Breaks: apt-show-versions (<< 0.22.10), libdist-inkt-perl (<< 0.024-5), libmarc-charset-perl (<< 1.35-3), libperl-dev (<< 5.24.0~), perl-doc (<< 5.42.0-1), perl-modules-5.22, perl-modules-5.24, perl-modules-5.26 (<< 5.26.2-5)
+Replaces: perl-base (<< 5.36.0-2), perl-modules (<< 5.22.0~)
+Provides: libansicolor-perl (= 5.01), libarchive-tar-perl (= 3.04), libattribute-handlers-perl (= 1.03), libautodie-perl (= 2.37), libcompress-raw-bzip2-perl (= 2.213), libcompress-raw-zlib-perl (= 2.213), libcompress-zlib-perl (= 2.213), libcpan-meta-perl (= 2.150010), libcpan-meta-requirements-perl (= 2.143), libcpan-meta-yaml-perl (= 0.020), libdigest-md5-perl (= 2.59), libdigest-perl (= 1.20), libdigest-sha-perl (= 6.04), libencode-perl (= 3.21), libexperimental-perl (= 0.035), libextutils-cbuilder-perl (= 0.280242), libextutils-command-perl (= 7.76), libextutils-install-perl (= 2.22), libextutils-parsexs-perl (= 3.570000), libfile-spec-perl (= 3.9400), libhttp-tiny-perl (= 0.090), libi18n-langtags-perl (= 0.45), libio-compress-base-perl (= 2.213), libio-compress-bzip2-perl (= 2.213), libio-compress-perl (= 2.213), libio-compress-zlib-perl (= 2.213), libio-zlib-perl (= 1.15), libjson-pp-perl (= 4.16000), liblocale-maketext-perl (= 1.33), liblocale-maketext-simple-perl (= 0.21.01), libmath-bigint-perl (= 2.005002), libmath-complex-perl (= 1.6300), libmime-base64-perl (= 3.16.01), libmodule-corelist-perl (= 5.20250702), libmodule-load-conditional-perl (= 0.74), libmodule-load-perl (= 0.36), libmodule-metadata-perl (= 1.000038), libnet-perl (= 1:3.15), libnet-ping-perl (= 2.76), libparams-check-perl (= 0.38), libparent-perl (= 0.244), libparse-cpan-meta-perl (= 2.150010), libperl-ostype-perl (= 1.010), libpod-escapes-perl (= 1.07), libpod-simple-perl (= 3.45), libstorable-perl (= 3.37), libsys-syslog-perl (= 0.36), libterm-table-perl (= 0.024), libtest-harness-perl (= 3.50), libtest-simple-perl (= 1.302210), libtest-tester-perl (= 1.302210), libtest-use-ok-perl (= 1.302210), libtest2-suite-perl (= 1.302210), libtext-balanced-perl (= 2.06), libthread-queue-perl (= 3.14), libthreads-perl (= 2.43), libthreads-shared-perl (= 1.70), libtime-hires-perl (= 1.9778), libtime-local-perl (= 1.3500), libtime-piece-perl (= 1.3600), libunicode-collate-perl (= 1.31), libversion-perl (= 1:0.9933), libversion-requirements-perl, podlators-perl (= 6.0.2)
+Multi-Arch: allowed
+Homepage: https://dev.perl.org/perl5/
+Priority: standard
+Section: perl
+Filename: pool/main/p/perl/perl_5.42.0-3_amd64.deb
+Size: 268780
+SHA256: cd9126bc127ac99d5054f625f823674ac2622b8c5b16badf1ae4ec733f855af1
+SHA1: c3edefe526d5153a7ef797b870c6a2e18408c25b
+MD5sum: 62a57b946899882fb9956e287ea881ed
+Description: Larry Wall's Practical Extraction and Report Language
+ Perl is a highly capable, feature-rich programming language with over
+ 20 years of development. Perl 5 runs on over 100 platforms from
+ portables to mainframes. Perl is suitable for both rapid prototyping
+ and large scale development projects.
+ .
+ Perl 5 supports many programming styles, including procedural,
+ functional, and object-oriented. In addition to this, it is supported
+ by an ever-growing collection of reusable modules which accelerate
+ development. Some of these modules include Web frameworks, database
+ integration, networking protocols, and encryption. Perl provides
+ interfaces to C and C++ for custom extension development.
+
+Package: python3.11
+Version: 3.11.2-6+deb12u6
+Architecture: amd64
+Maintainer: Matthias Klose <doko@debian.org>
+Installed-Size: 649
+Depends: python3.11-minimal (= 3.11.2-6+deb12u6), libpython3.11-stdlib (= 3.11.2-6+deb12u6), media-types | mime-support
+Recommends: ca-certificates
+Suggests: python3.11-venv, python3.11-doc, binutils
+Breaks: python3-all (<< 3.6.5~rc1-1), python3-dev (<< 3.6.5~rc1-1), python3-venv (<< 3.6.5-2)
+Multi-Arch: allowed
+Priority: optional
+Section: python
+Filename: pool/main/p/python3.11/python3.11_3.11.2-6+deb12u6_amd64.deb
+Size: 573328
+SHA256: 79a26e38eba4ed58f03cf606d08c4d5a6201a36b9f7c51a137685078e9644de7
+SHA1: 6a90fb3abf64e5dace00bd613bd1751243049034
+MD5sum: 5454690bb6594ba35847d743a2cf4f35
+Description: Interactive high-level object-oriented language (version 3.11)
+ Python is a high-level, interactive, object-oriented language. Its 3.11 version
+ includes an extensive class library with lots of goodies for
+ network programming, system administration, sounds and graphics.
+
+Package: reprepro
+Source: reprepro (5.4.7-1)
+Version: 5.4.7-1+b1
+Architecture: amd64
+Maintainer: Bastian Germann <bage@debian.org>
+Installed-Size: 1266
+Depends: libarchive13t64 (>= 3.0.4), libbz2-1.0, libc6 (>= 2.38), libdb5.3t64, libgpg-error0 (>= 1.14), libgpgme45 (>= 1.23.2), liblzma5 (>= 5.1.1alpha+20120614), zlib1g (>= 1:1.2.0.2), zstd
+Recommends: apt (>= 0.9.4)
+Suggests: pinentry-curses, gpg-agent, inoticoming, lzip (>= 1.11-2)
+Priority: optional
+Section: utils
+Filename: pool/main/r/reprepro/reprepro_5.4.7-1+b1_amd64.deb
+Size: 468448
+SHA256: 54344085fc5b816bb39c917b47a4b73596c20a2e174df467a2039699b0e6c88a
+SHA1: 0f55e9c5c478223d05ba2bdfae896ee250192c78
+MD5sum: fb9e1d84433a10e1e13672736935df9a
+Description: Debian package repository producer
+ reprepro is a tool to manage a repository of Debian packages
+ (.deb, .udeb, .dsc, ...). It stores files either being
+ injected manually or downloaded from some other repository
+ (partially) mirrored into one pool/ hierarchy.
+ Managed packages and files are stored in a Berkeley DB,
+ so no database server is needed.
+ Checking signatures of mirrored repositories and creating
+ signatures of the generated Package indices is supported.
+ .
+ This package also contains the changestool and rredtool helpers.
+
+Package: runit
+Version: 2.2.0-6
+Architecture: amd64
+Maintainer: Lorenzo Puliti <plorenzo@disroot.org>
+Installed-Size: 574
+Depends: runit-helper (>= 2.14.0~), sysuser-helper (>= 1.6), libc6 (>= 2.34)
+Recommends: runit-run | runit-init
+Suggests: socklog, ucspi-unix, zsh, runit-services, xchpst
+Conflicts: daemontools-run
+Breaks: runit-init (<< 2.1.2-60~), runit-run (<= 2.1.2-59), xchpst (<< 0.5.0-1~)
+Replaces: runit-init (<< 2.1.2-29~)
+Homepage: http://smarden.org/runit/
+Priority: optional
+Section: admin
+Filename: pool/main/r/runit/runit_2.2.0-6_amd64.deb
+Size: 146888
+SHA256: 0e19e9adc66c8e2854310b5c991554f14b0af8a45d76428acca01bfc47a263f5
+SHA1: 874394763001d6767a0851f6322feeef99a7149b
+MD5sum: e88e9bb55d8b0efc5ca2af4cfe21bc0f
+Description: system-wide service supervision
+ runit is a collection of tools to provide system-wide service supervision
+ and to manage services.  Contrary to sysv init, it not only cares about
+ starting and stopping services, but also supervises the service daemons
+ while they are running.  Amongst other things, it provides a reliable
+ interface to send signals to service daemons without the need for pid-files,
+ and a log facility with automatic log file rotation and disk space limits.
+ .
+ runit service supervision can run under sysv init, systemd or replace the init
+ system completely. Complete init replacement is provided by 'runit-init'
+ package. Users that want to take advantage of runit supervision under systemd
+ or sysv init can directly install the 'runit-run' package.
+
+Package: tar
+Version: 1.35+dfsg-3.1
+Architecture: amd64
+Essential: yes
+Maintainer: Janos Lenart <ocsi@debian.org>
+Installed-Size: 3085
+Pre-Depends: libacl1 (>= 2.2.23), libc6 (>= 2.38), libselinux1 (>= 3.1~)
+Suggests: bzip2, ncompress, xz-utils, tar-scripts, tar-doc
+Conflicts: cpio (<= 2.4.2-38)
+Breaks: dpkg-dev (<< 1.14.26)
+Replaces: cpio (<< 2.4.2-39)
+Multi-Arch: foreign
+Homepage: https://www.gnu.org/software/tar/
+Priority: required
+Section: utils
+Filename: pool/main/t/tar/tar_1.35+dfsg-3.1_amd64.deb
+Size: 814968
+SHA256: 214c02e1aa291076a3147b8a4c4cae02fadf4c67df629186e3e313726faef1de
+SHA1: 24a3a22da8a3c894ae31e2e72538d2d3d28e7790
+MD5sum: 31ebc19d9c4c1c57b1f337f3618588a9
+Description: GNU version of the tar archiving utility
+ Tar is a program for packaging a set of files as a single archive in tar
+ format.  The function it performs is conceptually similar to cpio, and to
+ things like PKZIP in the DOS world.  It is heavily used by the Debian package
+ management system, and is useful for performing system backups and exchanging
+ sets of files with others.
+
+Package: vim
+Version: 2:9.1.1882-1
+Architecture: amd64
+Maintainer: Debian Vim Maintainers <team+vim@tracker.debian.org>
+Installed-Size: 4077
+Depends: vim-common (= 2:9.1.1882-1), vim-runtime (= 2:9.1.1882-1), libacl1 (>= 2.2.23), libc6 (>= 2.38), libgpm2 (>= 1.20.7), libselinux1 (>= 3.1~), libsodium23 (>= 1.0.14), libtinfo6 (>= 6)
+Suggests: ctags, vim-doc, vim-scripts
+Provides: editor
+Homepage: https://www.vim.org/
+Priority: optional
+Section: editors
+Filename: pool/main/v/vim/vim_9.1.1882-1_amd64.deb
+Size: 1741676
+SHA256: 25d4d810684fd251b3e88a39e0a7a91a6a412040e48d09a175ab3d967c1c52d0
+SHA1: 505fe9c1197d9a7945d8f91bda9207714783d173
+MD5sum: 2e85a3053879e18e6aca628fc8ae2446
+Description: Vi IMproved - enhanced vi editor
+ Vim is an almost compatible version of the UNIX editor Vi.
+ .
+ Many new features have been added: multi level undo, syntax
+ highlighting, command line history, on-line help, filename
+ completion, block operations, folding, Unicode support, etc.
+ .
+ This package contains a version of vim compiled with a rather
+ standard set of features.  This package does not provide a GUI
+ version of Vim.  See the other vim-* packages if you need more
+ (or less).
+
+Package: wayland-protocols
+Version: 1.44-1
+Architecture: all
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Installed-Size: 1062
+Multi-Arch: foreign
+Homepage: https://wayland.freedesktop.org/
+Priority: optional
+Section: libdevel
+Filename: pool/main/w/wayland-protocols/wayland-protocols_1.44-1_all.deb
+Size: 125132
+SHA256: 3bbe8044f92fbf6822039064764d1d4b3a1dbb931083ab40ea189c9fd1d7a04f
+SHA1: 46c5208b1dbb1d62f8f1c9e7de650a3f3aef06ec
+MD5sum: e52aa0ef693ae8e448ace35e8464b197
+Description: wayland compositor protocols
+ Wayland protocols that add functionality not available in the Wayland core
+ protocol. Such protocols either add completely new functionality, or extend
+ the functionality of some other protocol either in Wayland core, or some other
+ protocol in wayland-protocols.
+
+Package: wget
+Version: 1.25.0-2
+Architecture: amd64
+Maintainer: Noël Köthe <noel@debian.org>
+Installed-Size: 3784
+Depends: libc6 (>= 2.38), libgnutls30t64 (>= 3.8.1), libidn2-0 (>= 0.6), libnettle8t64, libpcre2-8-0 (>= 10.22), libpsl5t64 (>= 0.16.0), libuuid1 (>= 2.16), zlib1g (>= 1:1.1.4)
+Recommends: ca-certificates
+Conflicts: wget-ssl
+Multi-Arch: foreign
+Homepage: https://www.gnu.org/software/wget/
+Priority: standard
+Section: web
+Filename: pool/main/w/wget/wget_1.25.0-2_amd64.deb
+Size: 984500
+SHA256: 5649cad63c781b2dcf5a7b87d70b3bf789291cd0d6bcabc4d521211f94980683
+SHA1: 3d0fb7c6536d3ba7860f0ab80b261107795ed9e4
+MD5sum: cc6c90bff89868a9dec2ec13cf86943c
+Description: retrieves files from the web
+ Wget is a network utility to retrieve files from the web
+ using HTTP(S) and FTP, the two most widely used internet
+ protocols. It works non-interactively, so it will work in
+ the background, after having logged off. The program supports
+ recursive retrieval of web-authoring pages as well as FTP
+ sites -- you can use Wget to make mirrors of archives and
+ home pages or to travel the web like a WWW robot.
+ .
+ Wget works particularly well with slow or unstable connections
+ by continuing to retrieve a document until the document is fully
+ downloaded. Re-getting files from where it left off works on
+ servers (both HTTP and FTP) that support it. Both HTTP and FTP
+ retrievals can be time stamped, so Wget can see if the remote
+ file has changed since the last retrieval and automatically
+ retrieve the new version if it has.
+ .
+ Wget supports proxy servers; this can lighten the network load,
+ speed up retrieval, and provide access behind firewalls.
+
+Package: xz-utils
+Version: 5.8.1-2
+Architecture: amd64
+Maintainer: Sebastian Andrzej Siewior <sebastian@breakpoint.cc>
+Installed-Size: 1424
+Depends: libc6 (>= 2.34), liblzma5 (>= 5.6.2)
+Conflicts: lzma (<< 9.22-1), xz-lzma
+Breaks: lzip (<< 1.8~rc2), manpages-de (<< 4.17.0-2~bpo11+1), manpages-fr (<< 4.17.0-2~bpo11+1), pristine-tar (<< 1.50+nmu1)
+Replaces: lzip (<< 1.8~rc2), manpages-de (<< 4.17.0-2~bpo11+1), manpages-fr (<< 4.17.0-2~bpo11+1), xz-lzma
+Provides: lzma
+Multi-Arch: foreign
+Homepage: https://tukaani.org/xz/
+Priority: standard
+Section: utils
+Filename: pool/main/x/xz-utils/xz-utils_5.8.1-2_amd64.deb
+Size: 659892
+SHA256: 4b70b86e555a6e7c620535c93793e56b8a41b2200a5d227df68c9a165dc7da45
+SHA1: d33aef4e9b8f7015c5020b5dec4c8cbed9e959ea
+MD5sum: 7f67c068ace770f832c935dd086a5d9b
+Description: XZ-format compression utilities
+ XZ is the successor to the Lempel-Ziv/Markov-chain Algorithm
+ compression format, which provides memory-hungry but powerful
+ compression (often better than bzip2) and fast, easy decompression.
+ .
+ This package provides the command line tools for working with XZ
+ compression, including xz, unxz, xzcat, xzgrep, and so on. They can
+ also handle the older LZMA format, and if invoked via appropriate
+ symlinks will emulate the behavior of the commands in the lzma
+ package.
+ .
+ The XZ format is similar to the older LZMA format but includes some
+ improvements for general use:
+ .
+  * 'file' magic for detecting XZ files;
+  * crc64 data integrity check;
+  * limited random-access reading support;
+  * improved support for multithreading (not used in xz-utils);
+  * support for flushing the encoder.
+
+Package: zsh
+Source: zsh (5.9-8)
+Version: 5.9-8+b15
+Architecture: amd64
+Maintainer: Debian Zsh Maintainers <pkg-zsh-devel@lists.alioth.debian.org>
+Installed-Size: 2505
+Depends: zsh-common (= 5.9-8), libc6 (>= 2.38), libcap2 (>= 1:2.10), libtinfo6 (>= 6), debianutils (>= 5.3-1~)
+Recommends: libgdbm6t64 (>= 1.16), libncursesw6 (>= 6), libpcre2-8-0 (>= 10.22)
+Suggests: zsh-doc
+Homepage: https://www.zsh.org/
+Priority: optional
+Section: shells
+Filename: pool/main/z/zsh/zsh_5.9-8+b15_amd64.deb
+Size: 919332
+SHA256: f6e6dce685a0ea1648d721b66980110272432cad99767330e850bec4f4a80a7f
+SHA1: 763d64eae8dd67ddf0b1a3c113cd560a2cdb64a2
+MD5sum: 197d1ae7252e7e89d8aeea679d4dc50f
+Description: shell with lots of features
+ Zsh is a UNIX command interpreter (shell) usable as an
+ interactive login shell and as a shell script command
+ processor. Of the standard shells, zsh most closely resembles
+ ksh but includes many enhancements. Zsh has command-line editing,
+ built-in spelling correction, programmable command completion,
+ shell functions (with autoloading), a history mechanism, and a
+ host of other features.
+

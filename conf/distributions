@@ -1,0 +1,10 @@
+Origin: Abunta Project
+Label: Abunta Local Repository
+Suite: trixie
+Version: 1.0
+Codename: arixie
+Architectures: amd64 
+Components: main
+Description: Local APT repository for Abunta build system
+SignWith: 2BFBBE42191281EA025B8A23DD5BB1E44040B90F
+
