@@ -1,3 +1,17 @@
+Package: abunta-installer-gui
+Version: 1.0.0
+Architecture: all
+Maintainer: root
+Depends: python3, python3-gi, gir1.2-adw-1
+Priority: optional
+Section: utils
+Filename: pool/main/a/abunta-installer-gui/abunta-installer-gui_1.0.0_all.deb
+Size: 1112
+SHA256: 5bba9cd53575c8a9d976cf8e71095d16aa2b011cb4659ffa4dfc0857e10840d0
+SHA1: e253391a67de1caeeaf57302a98b2767c8c31428
+MD5sum: 65ded2a3a169f36e376360a10b924dfc
+Description: Abunta Tool
+
 Package: apt
 Version: 3.1.12
 Architecture: amd64
@@ -139,6 +153,20 @@ Description: command line tool for transferring data with URL syntax
  NTLM, Negotiate, kerberos...), file transfer resume, proxy tunneling and a
  busload of other useful tricks.
 
+Package: de-abunta-desktop
+Version: 1.0.0
+Architecture: all
+Maintainer: root
+Depends: python3, python3-gi, gir1.2-adw-1
+Priority: optional
+Section: utils
+Filename: pool/main/d/de-abunta-desktop/de-abunta-desktop_1.0.0_all.deb
+Size: 1104
+SHA256: c6819e58b1e9ef4dda537f0c02fb96b5d5cea7caabe5078799dc66984854d13e
+SHA1: 7834cf687dfd55b8865eb98c44d7cebcb3160a5a
+MD5sum: 039b46a07ae8a5d9c307138e95c9cf84
+Description: Abunta Tool
+
 Package: debootstrap
 Version: 1.0.142
 Architecture: all
@@ -185,6 +213,20 @@ Description: Debian package management system
  installation and removal of Debian software packages.
  .
  For Debian package development tools, install dpkg-dev.
+
+Package: edit-abunta-themes
+Version: 1.0.0
+Architecture: all
+Maintainer: root
+Depends: python3, python3-gi, gir1.2-adw-1
+Priority: optional
+Section: utils
+Filename: pool/main/e/edit-abunta-themes/edit-abunta-themes_1.0.0_all.deb
+Size: 1108
+SHA256: 7cff3986276528f8de266e82ce0ba6b089671c3fe72b63eb8863e44adb55e8d1
+SHA1: 59f80fb8de61b86c9ffd25da1c6f24af383040b4
+MD5sum: b4d792473699059a6177e184b7f6ce9d
+Description: Abunta Tool
 
 Package: emacs
 Version: 1:30.2+1-2

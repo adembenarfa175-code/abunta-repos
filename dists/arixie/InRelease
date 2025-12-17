@@ -6,35 +6,35 @@ Label: Abunta Local Repository
 Suite: trixie
 Codename: arixie
 Version: 1.0
-Date: Wed, 17 Dec 2025 15:13:54 UTC
+Date: Wed, 17 Dec 2025 16:41:39 UTC
 Architectures: amd64
 Components: main
 Description: Local APT repository for Abunta build system
 MD5Sum:
- 400aa831ce1b14cc6010cec26bd58177 43660 main/binary-amd64/Packages
- 3166e221ec0e6c127e484df9b9d197a5 16717 main/binary-amd64/Packages.gz
+ 713e293c04061fb0d323e63fee6dfd3b 44944 main/binary-amd64/Packages
+ 8f867407d5660b350488dab75f46eebc 17157 main/binary-amd64/Packages.gz
  f8b59178eefe5dd3f51574379899addd 177 main/binary-amd64/Release
 SHA1:
- 3c2b5cb3a727272f0859c12fbfe23f64abbf193e 43660 main/binary-amd64/Packages
- 18de94e701aeda2a757d164a32a510886a458b37 16717 main/binary-amd64/Packages.gz
+ f370b89d2dcda0ddd70f5f1a7a69d932c3f3ecd4 44944 main/binary-amd64/Packages
+ 2bdf5a46ca49899ea9e37456b80da2dfedc4f4c0 17157 main/binary-amd64/Packages.gz
  2e316b4ba2ce7e889155ef272298567e3e9f5845 177 main/binary-amd64/Release
 SHA256:
- 1bd54b84ce5021157c69c3bd811eac27755ee25b58b195f144f355d0da9ac6ec 43660 main/binary-amd64/Packages
- 5140751be205cf5ed254b0efe04873107e9d0c20f5ce45ad474c30614dbba655 16717 main/binary-amd64/Packages.gz
+ 57ca9dbb7292861fd49a443ccfed5d550a6b07a2d3fadbb1f0c96c8867eb31f5 44944 main/binary-amd64/Packages
+ 9b1afc8b24fbfde3d242f63861df9a2ea4c24476ee7a6b96c39900f3a2ea2435 17157 main/binary-amd64/Packages.gz
  e959dcb92dd489e6cd1e324a23f0363907b9d326a0f9ff3320c6b5a9cd67d0e8 177 main/binary-amd64/Release
 -----BEGIN PGP SIGNATURE-----
 
-iQIzBAEBCgAdFiEEK/u+QhkSgeoCW4oj3Vux5EBAuQ8FAmlCyLkACgkQ3Vux5EBA
-uQ+FDRAAttKqMTv7ClyYULcHI+2ID5e4OGFxKTvlx2yCEcGsE22Spl0bD1ltpRai
-YnzQXgRP0Hg1IKsfQBk8Sdm2N8ct4kpoMm97hsPZypOIykODkYQpwW/pelY7o4nT
-uIFdmsOGdx97nEeSICSf/JbVmv10LMhTBE4bfTPZvjoJs72aCCucYvn89I2HYtBO
-9G9Z/EJSr+GOemC8nQ514HfARM/GutjFZda9y+rxV6WPkBCw4CGmL4hR06v7eBpj
-no8UvBrDWIkwK7gSkZHehw+nlDCH2MxB1HYovPi0z84rwfnQTyy1zieR5XAwKBda
-E2EyvzNdabKHz9WUajVczJCDufkEb5PPAQjjj5pBIbjLuCMAu3CdMttzOPhUIQN8
-wMtTaD44iJ+dxlzNG3Om+ZFhdoFFiEIl6Clc0v4f9DUiTneVqSqHpaCGkcubVzzE
-zeEFX/tHpc4PjlsROi3lhOkbWxiioDJjKRqy0tUxBw8I3e6Ty0YrJ3drU+wehEvm
-6/2szRo4ihoU4gYybDJoxIwahAl2VfhzkiBsxTX9taeA8zE8LxqzQB41xRvuqMGM
-sPVsppAwI7ZStsXLqllK8dI8ojEfopzJ3TJ9X/lAPtV8/v0hDfU+iraYyxLCMqK7
-eoQfeObv7jmDq6TdTKRJENPOf8XyUwYB2TiALzqsmLQKwo8tcKw=
-=uPLe
+iQIzBAEBCgAdFiEEK/u+QhkSgeoCW4oj3Vux5EBAuQ8FAmlC3UMACgkQ3Vux5EBA
+uQ/ioxAAr19YFHHxp7FSAirc29NK7lVZDoW4268WGelKztKh8+869lfgHYJsAjim
+ZPN+1L26+J2UCkHkYGPcmXIm65EGldCqcZRTrYB1ZbZC45Lign6tJM6xX9c3ekOE
++x7Ad4o6zyfna4GVIYl3QjOEx5OzZfPk5w5lrlTQJJIuE6G0mWPV6Ok5gfIHauFm
+wrlrhgSOFV4cboUXXjsNnDk/ubuklBC6KD+dcDRQvgaeGb6zjRRvRDrL498/ScdG
+fzVdcwcp+6Ge0wFdzpQW4drXU3BSTVewpjWBwD0Q/8ki8+x5vOLscg0SmeRIQHya
+0euFgVH0mP8RR12YU+vSd0zEOuARPD5cVt9GdieMV0GHNZUMpqawF3e6sstK6DMz
+fPC6UX4oka5ejzH4C30vq4hsU1NsHzXz+2Juij2wLDIwZnqIt5FaOGq0SX04Syy1
+Qsi3GgQeXGTpBhJRsRZbITgStvaqvrMn2glbLLihaL5T2jaP4vZQEVuqft2XTfzB
+2cDljEYO0UG2Qpl+Au41asLlDyX+cqOTY6XwFPzbIvNoZQMxeQzgczgvVQFkK4+d
+k+yOZwr2UOgwic+twFoi8oEh9wxFPQSZfobOLNDdLa58Sm5ljswjrI45h/drmDFY
+6rQd8wSoF5+6QYV9txboin5q9gXSHkfMkFod7U/UYKSxmXmvlI0=
+=wu7C
 -----END PGP SIGNATURE-----
