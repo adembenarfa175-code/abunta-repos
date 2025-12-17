@@ -3,151 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abunta Repo | Index of pool/main</title>
+    <title>Abunta Repository - pool/main</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap">
     <style>
         :root {
-            --bg-dark: #0c0c0c;
-            --card-bg: #181818;
-            --text-main: #f5f5f5;
-            --text-dim: #a0a0a0;
-            --accent: #e95420; /* Ubuntu Orange */
-            --border: #2a2a2a;
-            --hover-row: #222222;
+            --bg: #0c0c0c; --card: #181818; --accent: #e95420;
+            --text: #f5f5f5; --dim: #888; --border: #2a2a2a;
         }
-
-        body {
-            font-family: 'Ubuntu', sans-serif;
-            background-color: var(--bg-dark);
-            color: var(--text-main);
-            margin: 0;
-            padding: 50px 20px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .wrapper {
-            width: 100%;
-            max-width: 960px;
-            background: var(--card-bg);
-            border-radius: 12px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
-            border: 1px solid var(--border);
-            overflow: hidden;
-        }
-
-        .header {
-            padding: 25px 35px;
-            background: linear-gradient(to right, #1e1e1e, #181818);
-            border-bottom: 3px solid var(--accent);
-        }
-
-        .header h1 {
-            margin: 0;
-            font-size: 1.4rem;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-        }
-
-        .list-container {
-            padding: 10px 0;
-        }
-
-        .row {
-            display: flex;
-            align-items: center;
-            padding: 14px 35px;
-            text-decoration: none;
-            color: var(--text-main);
-            border-bottom: 1px solid var(--border);
-            transition: all 0.2s ease-in-out;
-        }
-
-        .row:last-child { border-bottom: none; }
-
-        .row:hover {
-            background-color: var(--hover-row);
-            padding-left: 45px;
-        }
-
-        .row img {
-            width: 24px;
-            height: 24px;
-            margin-right: 18px;
-        }
-
-        .row .name {
-            font-size: 15px;
-            flex-grow: 1;
-        }
-
-        .parent-dir {
-            background: #111;
-            color: var(--accent);
-            font-weight: 700;
-            border-bottom: 2px solid var(--border);
-        }
-
-        .footer {
-            padding: 20px;
-            text-align: center;
-            font-size: 11px;
-            color: var(--text-dim);
-            background: #141414;
-            border-top: 1px solid var(--border);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
+        body { font-family: 'Ubuntu', sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 20px; display: flex; justify-content: center; }
+        .wrapper { width: 100%; max-width: 1000px; background: var(--card); border-radius: 12px; border: 1px solid var(--border); overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.7); margin-top: 20px; }
+        .header { padding: 20px 30px; background: #222; border-bottom: 3px solid var(--accent); }
+        .header h1 { margin: 0; font-size: 1.2rem; color: var(--accent); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .list { list-style: none; padding: 0; margin: 0; }
+        .item { display: flex; align-items: center; padding: 12px 25px; border-bottom: 1px solid var(--border); text-decoration: none; color: var(--text); transition: 0.2s; border-left: 3px solid transparent; }
+        .item:hover { background: #252525; padding-left: 35px; border-left: 3px solid var(--accent); }
+        .item img { width: 20px; height: 20px; margin-right: 15px; }
+        .parent { background: #111; font-weight: bold; color: var(--accent); }
+        .footer { padding: 15px; text-align: center; font-size: 10px; color: var(--dim); background: #141414; letter-spacing: 2px; text-transform: uppercase; }
+        .name { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
     </style>
 </head>
 <body>
     <div class="wrapper">
-        <div class="header">
-            <h1>Index of pool/main</h1>
+        <div class="header"><h1>Abunta Repository - pool/main</h1></div>
+        <div class="list">
+            <a href=".." class="item parent"><img src="../icon/folder.png" style="filter: hue-rotate(270deg);"> ⤴ .. (Parent Directory)</a>
+            <a href='a' class='item'><img src='../icon/folder.png' alt='icon'><span class='name'>a/</span></a>
+            <a href='b' class='item'><img src='../icon/folder.png' alt='icon'><span class='name'>b/</span></a>
+            <a href='c' class='item'><img src='../icon/folder.png' alt='icon'><span class='name'>c/</span></a>
+            <a href='d' class='item'><img src='../icon/folder.png' alt='icon'><span class='name'>d/</span></a>
+            <a href='e' class='item'><img src='../icon/folder.png' alt='icon'><span class='name'>e/</span></a>
+            <a href='f' class='item'><img src='../icon/folder.png' alt='icon'><span class='name'>f/</span></a>
+            <a href='g' class='item'><img src='../icon/folder.png' alt='icon'><span class='name'>g/</span></a>
+            <a href='h' class='item'><img src='../icon/folder.png' alt='icon'><span class='name'>h/</span></a>
+            <a href='i' class='item'><img src='../icon/folder.png' alt='icon'><span class='name'>i/</span></a>
+            <a href='j' class='item'><img src='../icon/folder.png' alt='icon'><span class='name'>j/</span></a>
+            <a href='k' class='item'><img src='../icon/folder.png' alt='icon'><span class='name'>k/</span></a>
+            <a href='l' class='item'><img src='../icon/folder.png' alt='icon'><span class='name'>l/</span></a>
+            <a href='libb' class='item'><img src='../icon/folder.png' alt='icon'><span class='name'>libb/</span></a>
+            <a href='libc' class='item'><img src='../icon/folder.png' alt='icon'><span class='name'>libc/</span></a>
+            <a href='libe' class='item'><img src='../icon/folder.png' alt='icon'><span class='name'>libe/</span></a>
+            <a href='libi' class='item'><img src='../icon/folder.png' alt='icon'><span class='name'>libi/</span></a>
+            <a href='libl' class='item'><img src='../icon/folder.png' alt='icon'><span class='name'>libl/</span></a>
+            <a href='libm' class='item'><img src='../icon/folder.png' alt='icon'><span class='name'>libm/</span></a>
+            <a href='libn' class='item'><img src='../icon/folder.png' alt='icon'><span class='name'>libn/</span></a>
+            <a href='libs' class='item'><img src='../icon/folder.png' alt='icon'><span class='name'>libs/</span></a>
+            <a href='libt' class='item'><img src='../icon/folder.png' alt='icon'><span class='name'>libt/</span></a>
+            <a href='libu' class='item'><img src='../icon/folder.png' alt='icon'><span class='name'>libu/</span></a>
+            <a href='m' class='item'><img src='../icon/folder.png' alt='icon'><span class='name'>m/</span></a>
+            <a href='n' class='item'><img src='../icon/folder.png' alt='icon'><span class='name'>n/</span></a>
+            <a href='o' class='item'><img src='../icon/folder.png' alt='icon'><span class='name'>o/</span></a>
+            <a href='p' class='item'><img src='../icon/folder.png' alt='icon'><span class='name'>p/</span></a>
+            <a href='q' class='item'><img src='../icon/folder.png' alt='icon'><span class='name'>q/</span></a>
+            <a href='r' class='item'><img src='../icon/folder.png' alt='icon'><span class='name'>r/</span></a>
+            <a href='s' class='item'><img src='../icon/folder.png' alt='icon'><span class='name'>s/</span></a>
+            <a href='t' class='item'><img src='../icon/folder.png' alt='icon'><span class='name'>t/</span></a>
+            <a href='u' class='item'><img src='../icon/folder.png' alt='icon'><span class='name'>u/</span></a>
+            <a href='v' class='item'><img src='../icon/folder.png' alt='icon'><span class='name'>v/</span></a>
+            <a href='w' class='item'><img src='../icon/folder.png' alt='icon'><span class='name'>w/</span></a>
+            <a href='x' class='item'><img src='../icon/folder.png' alt='icon'><span class='name'>x/</span></a>
+            <a href='z' class='item'><img src='../icon/folder.png' alt='icon'><span class='name'>z/</span></a>
         </div>
-        <div class="list-container">
-            <a href=".." class="row parent-dir">
-                <span>⤴ .. (Parent Directory)</span>
-            </a>
-            <a href='a/' class='row'><img src='../folder.png' alt='folder'><span class='name'>a/</span></a>
-            <a href='b/' class='row'><img src='../folder.png' alt='folder'><span class='name'>b/</span></a>
-            <a href='c/' class='row'><img src='../folder.png' alt='folder'><span class='name'>c/</span></a>
-            <a href='d/' class='row'><img src='../folder.png' alt='folder'><span class='name'>d/</span></a>
-            <a href='e/' class='row'><img src='../folder.png' alt='folder'><span class='name'>e/</span></a>
-            <a href='f/' class='row'><img src='../folder.png' alt='folder'><span class='name'>f/</span></a>
-            <a href='g/' class='row'><img src='../folder.png' alt='folder'><span class='name'>g/</span></a>
-            <a href='h/' class='row'><img src='../folder.png' alt='folder'><span class='name'>h/</span></a>
-            <a href='i/' class='row'><img src='../folder.png' alt='folder'><span class='name'>i/</span></a>
-            <a href='j/' class='row'><img src='../folder.png' alt='folder'><span class='name'>j/</span></a>
-            <a href='k/' class='row'><img src='../folder.png' alt='folder'><span class='name'>k/</span></a>
-            <a href='l/' class='row'><img src='../folder.png' alt='folder'><span class='name'>l/</span></a>
-            <a href='libb/' class='row'><img src='../folder.png' alt='folder'><span class='name'>libb/</span></a>
-            <a href='libc/' class='row'><img src='../folder.png' alt='folder'><span class='name'>libc/</span></a>
-            <a href='libe/' class='row'><img src='../folder.png' alt='folder'><span class='name'>libe/</span></a>
-            <a href='libi/' class='row'><img src='../folder.png' alt='folder'><span class='name'>libi/</span></a>
-            <a href='libl/' class='row'><img src='../folder.png' alt='folder'><span class='name'>libl/</span></a>
-            <a href='libm/' class='row'><img src='../folder.png' alt='folder'><span class='name'>libm/</span></a>
-            <a href='libn/' class='row'><img src='../folder.png' alt='folder'><span class='name'>libn/</span></a>
-            <a href='libs/' class='row'><img src='../folder.png' alt='folder'><span class='name'>libs/</span></a>
-            <a href='libt/' class='row'><img src='../folder.png' alt='folder'><span class='name'>libt/</span></a>
-            <a href='libu/' class='row'><img src='../folder.png' alt='folder'><span class='name'>libu/</span></a>
-            <a href='m/' class='row'><img src='../folder.png' alt='folder'><span class='name'>m/</span></a>
-            <a href='n/' class='row'><img src='../folder.png' alt='folder'><span class='name'>n/</span></a>
-            <a href='o/' class='row'><img src='../folder.png' alt='folder'><span class='name'>o/</span></a>
-            <a href='p/' class='row'><img src='../folder.png' alt='folder'><span class='name'>p/</span></a>
-            <a href='q/' class='row'><img src='../folder.png' alt='folder'><span class='name'>q/</span></a>
-            <a href='r/' class='row'><img src='../folder.png' alt='folder'><span class='name'>r/</span></a>
-            <a href='s/' class='row'><img src='../folder.png' alt='folder'><span class='name'>s/</span></a>
-            <a href='t/' class='row'><img src='../folder.png' alt='folder'><span class='name'>t/</span></a>
-            <a href='u/' class='row'><img src='../folder.png' alt='folder'><span class='name'>u/</span></a>
-            <a href='v/' class='row'><img src='../folder.png' alt='folder'><span class='name'>v/</span></a>
-            <a href='w/' class='row'><img src='../folder.png' alt='folder'><span class='name'>w/</span></a>
-            <a href='x/' class='row'><img src='../folder.png' alt='folder'><span class='name'>x/</span></a>
-            <a href='z/' class='row'><img src='../folder.png' alt='folder'><span class='name'>z/</span></a>
-        </div>
-        <div class="footer">
-            Abunta OS Repository &bull; Powered by Reprepro &bull; 2025
-        </div>
+        <div class="footer">ABUNTA OS PROJECT REPOSITORY &bull; 2025</div>
     </div>
 </body>
 </html>
