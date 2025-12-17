@@ -2,142 +2,151 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Abunta Repository | Index of pool/main</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abunta Repo | Index of pool/main</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap">
     <style>
         :root {
-            --bg-color: #111111;
-            --container-bg: #1a1a1a;
-            --text-color: #eeeeee;
-            --accent-color: #e95420; /* لون أوبونتو البرتقالي المميز */
-            --border-color: #333333;
-            --hover-bg: #262626;
+            --bg-dark: #0c0c0c;
+            --card-bg: #181818;
+            --text-main: #f5f5f5;
+            --text-dim: #a0a0a0;
+            --accent: #e95420; /* Ubuntu Orange */
+            --border: #2a2a2a;
+            --hover-row: #222222;
         }
 
         body {
             font-family: 'Ubuntu', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
+            background-color: var(--bg-dark);
+            color: var(--text-main);
             margin: 0;
-            padding: 40px 20px;
+            padding: 50px 20px;
+            display: flex;
+            justify-content: center;
         }
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: var(--container-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
+        .wrapper {
+            width: 100%;
+            max-width: 960px;
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+            border: 1px solid var(--border);
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
         .header {
-            padding: 20px 30px;
-            background: var(--hover-bg);
-            border-bottom: 2px solid var(--accent-color);
+            padding: 25px 35px;
+            background: linear-gradient(to right, #1e1e1e, #181818);
+            border-bottom: 3px solid var(--accent);
         }
 
         .header h1 {
             margin: 0;
-            font-size: 1.2rem;
-            color: var(--accent-color);
-            letter-spacing: 0.5px;
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
         }
 
-        .file-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
+        .list-container {
+            padding: 10px 0;
         }
 
-        .file-item {
-            border-bottom: 1px solid var(--border-color);
-            transition: background 0.2s ease;
-        }
-
-        .file-item:last-child { border-bottom: none; }
-
-        .file-item:hover {
-            background: var(--hover-bg);
-        }
-
-        .file-item a {
+        .row {
             display: flex;
             align-items: center;
-            padding: 12px 30px;
+            padding: 14px 35px;
             text-decoration: none;
-            color: var(--text-color);
-            font-size: 14px;
+            color: var(--text-main);
+            border-bottom: 1px solid var(--border);
+            transition: all 0.2s ease-in-out;
         }
 
-        .file-item img {
-            width: 22px;
-            height: 22px;
-            margin-right: 15px;
+        .row:last-child { border-bottom: none; }
+
+        .row:hover {
+            background-color: var(--hover-row);
+            padding-left: 45px;
         }
 
-        .parent-link {
-            background: #222;
-            font-weight: bold;
+        .row img {
+            width: 24px;
+            height: 24px;
+            margin-right: 18px;
+        }
+
+        .row .name {
+            font-size: 15px;
+            flex-grow: 1;
+        }
+
+        .parent-dir {
+            background: #111;
+            color: var(--accent);
+            font-weight: 700;
+            border-bottom: 2px solid var(--border);
         }
 
         .footer {
-            padding: 15px;
+            padding: 20px;
             text-align: center;
             font-size: 11px;
-            color: #666;
+            color: var(--text-dim);
+            background: #141414;
+            border-top: 1px solid var(--border);
             text-transform: uppercase;
+            letter-spacing: 2px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="wrapper">
         <div class="header">
             <h1>Index of pool/main</h1>
         </div>
-        <ul class="file-list">
-            <li class="file-item parent-link">
-                <a href=".."><span>⤴ .. (Parent Directory)</span></a>
-            </li>
-            <li class='file-item'><a href='a/'><img src='../folder.png' alt='dir'> a/</a></li>
-            <li class='file-item'><a href='b/'><img src='../folder.png' alt='dir'> b/</a></li>
-            <li class='file-item'><a href='c/'><img src='../folder.png' alt='dir'> c/</a></li>
-            <li class='file-item'><a href='d/'><img src='../folder.png' alt='dir'> d/</a></li>
-            <li class='file-item'><a href='e/'><img src='../folder.png' alt='dir'> e/</a></li>
-            <li class='file-item'><a href='f/'><img src='../folder.png' alt='dir'> f/</a></li>
-            <li class='file-item'><a href='g/'><img src='../folder.png' alt='dir'> g/</a></li>
-            <li class='file-item'><a href='h/'><img src='../folder.png' alt='dir'> h/</a></li>
-            <li class='file-item'><a href='i/'><img src='../folder.png' alt='dir'> i/</a></li>
-            <li class='file-item'><a href='j/'><img src='../folder.png' alt='dir'> j/</a></li>
-            <li class='file-item'><a href='k/'><img src='../folder.png' alt='dir'> k/</a></li>
-            <li class='file-item'><a href='l/'><img src='../folder.png' alt='dir'> l/</a></li>
-            <li class='file-item'><a href='libb/'><img src='../folder.png' alt='dir'> libb/</a></li>
-            <li class='file-item'><a href='libc/'><img src='../folder.png' alt='dir'> libc/</a></li>
-            <li class='file-item'><a href='libe/'><img src='../folder.png' alt='dir'> libe/</a></li>
-            <li class='file-item'><a href='libi/'><img src='../folder.png' alt='dir'> libi/</a></li>
-            <li class='file-item'><a href='libl/'><img src='../folder.png' alt='dir'> libl/</a></li>
-            <li class='file-item'><a href='libm/'><img src='../folder.png' alt='dir'> libm/</a></li>
-            <li class='file-item'><a href='libn/'><img src='../folder.png' alt='dir'> libn/</a></li>
-            <li class='file-item'><a href='libs/'><img src='../folder.png' alt='dir'> libs/</a></li>
-            <li class='file-item'><a href='libt/'><img src='../folder.png' alt='dir'> libt/</a></li>
-            <li class='file-item'><a href='libu/'><img src='../folder.png' alt='dir'> libu/</a></li>
-            <li class='file-item'><a href='m/'><img src='../folder.png' alt='dir'> m/</a></li>
-            <li class='file-item'><a href='n/'><img src='../folder.png' alt='dir'> n/</a></li>
-            <li class='file-item'><a href='o/'><img src='../folder.png' alt='dir'> o/</a></li>
-            <li class='file-item'><a href='p/'><img src='../folder.png' alt='dir'> p/</a></li>
-            <li class='file-item'><a href='q/'><img src='../folder.png' alt='dir'> q/</a></li>
-            <li class='file-item'><a href='r/'><img src='../folder.png' alt='dir'> r/</a></li>
-            <li class='file-item'><a href='s/'><img src='../folder.png' alt='dir'> s/</a></li>
-            <li class='file-item'><a href='t/'><img src='../folder.png' alt='dir'> t/</a></li>
-            <li class='file-item'><a href='u/'><img src='../folder.png' alt='dir'> u/</a></li>
-            <li class='file-item'><a href='v/'><img src='../folder.png' alt='dir'> v/</a></li>
-            <li class='file-item'><a href='w/'><img src='../folder.png' alt='dir'> w/</a></li>
-            <li class='file-item'><a href='x/'><img src='../folder.png' alt='dir'> x/</a></li>
-            <li class='file-item'><a href='z/'><img src='../folder.png' alt='dir'> z/</a></li>
-        </ul>
+        <div class="list-container">
+            <a href=".." class="row parent-dir">
+                <span>⤴ .. (Parent Directory)</span>
+            </a>
+            <a href='a/' class='row'><img src='../folder.png' alt='folder'><span class='name'>a/</span></a>
+            <a href='b/' class='row'><img src='../folder.png' alt='folder'><span class='name'>b/</span></a>
+            <a href='c/' class='row'><img src='../folder.png' alt='folder'><span class='name'>c/</span></a>
+            <a href='d/' class='row'><img src='../folder.png' alt='folder'><span class='name'>d/</span></a>
+            <a href='e/' class='row'><img src='../folder.png' alt='folder'><span class='name'>e/</span></a>
+            <a href='f/' class='row'><img src='../folder.png' alt='folder'><span class='name'>f/</span></a>
+            <a href='g/' class='row'><img src='../folder.png' alt='folder'><span class='name'>g/</span></a>
+            <a href='h/' class='row'><img src='../folder.png' alt='folder'><span class='name'>h/</span></a>
+            <a href='i/' class='row'><img src='../folder.png' alt='folder'><span class='name'>i/</span></a>
+            <a href='j/' class='row'><img src='../folder.png' alt='folder'><span class='name'>j/</span></a>
+            <a href='k/' class='row'><img src='../folder.png' alt='folder'><span class='name'>k/</span></a>
+            <a href='l/' class='row'><img src='../folder.png' alt='folder'><span class='name'>l/</span></a>
+            <a href='libb/' class='row'><img src='../folder.png' alt='folder'><span class='name'>libb/</span></a>
+            <a href='libc/' class='row'><img src='../folder.png' alt='folder'><span class='name'>libc/</span></a>
+            <a href='libe/' class='row'><img src='../folder.png' alt='folder'><span class='name'>libe/</span></a>
+            <a href='libi/' class='row'><img src='../folder.png' alt='folder'><span class='name'>libi/</span></a>
+            <a href='libl/' class='row'><img src='../folder.png' alt='folder'><span class='name'>libl/</span></a>
+            <a href='libm/' class='row'><img src='../folder.png' alt='folder'><span class='name'>libm/</span></a>
+            <a href='libn/' class='row'><img src='../folder.png' alt='folder'><span class='name'>libn/</span></a>
+            <a href='libs/' class='row'><img src='../folder.png' alt='folder'><span class='name'>libs/</span></a>
+            <a href='libt/' class='row'><img src='../folder.png' alt='folder'><span class='name'>libt/</span></a>
+            <a href='libu/' class='row'><img src='../folder.png' alt='folder'><span class='name'>libu/</span></a>
+            <a href='m/' class='row'><img src='../folder.png' alt='folder'><span class='name'>m/</span></a>
+            <a href='n/' class='row'><img src='../folder.png' alt='folder'><span class='name'>n/</span></a>
+            <a href='o/' class='row'><img src='../folder.png' alt='folder'><span class='name'>o/</span></a>
+            <a href='p/' class='row'><img src='../folder.png' alt='folder'><span class='name'>p/</span></a>
+            <a href='q/' class='row'><img src='../folder.png' alt='folder'><span class='name'>q/</span></a>
+            <a href='r/' class='row'><img src='../folder.png' alt='folder'><span class='name'>r/</span></a>
+            <a href='s/' class='row'><img src='../folder.png' alt='folder'><span class='name'>s/</span></a>
+            <a href='t/' class='row'><img src='../folder.png' alt='folder'><span class='name'>t/</span></a>
+            <a href='u/' class='row'><img src='../folder.png' alt='folder'><span class='name'>u/</span></a>
+            <a href='v/' class='row'><img src='../folder.png' alt='folder'><span class='name'>v/</span></a>
+            <a href='w/' class='row'><img src='../folder.png' alt='folder'><span class='name'>w/</span></a>
+            <a href='x/' class='row'><img src='../folder.png' alt='folder'><span class='name'>x/</span></a>
+            <a href='z/' class='row'><img src='../folder.png' alt='folder'><span class='name'>z/</span></a>
+        </div>
         <div class="footer">
-            Abunta Project Repository &copy; 2025
+            Abunta OS Repository &bull; Powered by Reprepro &bull; 2025
         </div>
     </div>
 </body>

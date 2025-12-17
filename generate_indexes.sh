@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# دالة لتوليد ملفات الفهرس بتنسيق احترافي
+# Function to generate a professional index.html with Ubuntu styling
 generate_index() {
     local dir=$1
     local title="Index of ${dir#./}"
     
-    # حساب المسار النسبي للوصول للأيقونات من أي مجلد فرعي
+    # Calculate relative path for icons to work in subdirectories
     local depth=$(echo "${dir#./}" | tr -cd '/' | wc -c)
     local rel_path="."
     if [ "$dir" != "." ]; then
@@ -13,7 +13,7 @@ generate_index() {
         for ((i=1; i<depth; i++)); do rel_path="../$rel_path"; done
     fi
 
-    # أيقوناتك التي حددتها
+    # Define your custom icons
     local folder_icon="${rel_path}/folder.png"
     local file_icon="${rel_path}/deb-file.png"
 
@@ -22,123 +22,133 @@ generate_index() {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Abunta Repository | $title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abunta Repo | $title</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap">
     <style>
         :root {
-            --bg-color: #111111;
-            --container-bg: #1a1a1a;
-            --text-color: #eeeeee;
-            --accent-color: #e95420; /* لون أوبونتو البرتقالي المميز */
-            --border-color: #333333;
-            --hover-bg: #262626;
+            --bg-dark: #0c0c0c;
+            --card-bg: #181818;
+            --text-main: #f5f5f5;
+            --text-dim: #a0a0a0;
+            --accent: #e95420; /* Ubuntu Orange */
+            --border: #2a2a2a;
+            --hover-row: #222222;
         }
 
         body {
             font-family: 'Ubuntu', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
+            background-color: var(--bg-dark);
+            color: var(--text-main);
             margin: 0;
-            padding: 40px 20px;
+            padding: 50px 20px;
+            display: flex;
+            justify-content: center;
         }
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: var(--container-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
+        .wrapper {
+            width: 100%;
+            max-width: 960px;
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+            border: 1px solid var(--border);
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
         .header {
-            padding: 20px 30px;
-            background: var(--hover-bg);
-            border-bottom: 2px solid var(--accent-color);
+            padding: 25px 35px;
+            background: linear-gradient(to right, #1e1e1e, #181818);
+            border-bottom: 3px solid var(--accent);
         }
 
         .header h1 {
             margin: 0;
-            font-size: 1.2rem;
-            color: var(--accent-color);
-            letter-spacing: 0.5px;
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
         }
 
-        .file-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
+        .list-container {
+            padding: 10px 0;
         }
 
-        .file-item {
-            border-bottom: 1px solid var(--border-color);
-            transition: background 0.2s ease;
-        }
-
-        .file-item:last-child { border-bottom: none; }
-
-        .file-item:hover {
-            background: var(--hover-bg);
-        }
-
-        .file-item a {
+        .row {
             display: flex;
             align-items: center;
-            padding: 12px 30px;
+            padding: 14px 35px;
             text-decoration: none;
-            color: var(--text-color);
-            font-size: 14px;
+            color: var(--text-main);
+            border-bottom: 1px solid var(--border);
+            transition: all 0.2s ease-in-out;
         }
 
-        .file-item img {
-            width: 22px;
-            height: 22px;
-            margin-right: 15px;
+        .row:last-child { border-bottom: none; }
+
+        .row:hover {
+            background-color: var(--hover-row);
+            padding-left: 45px;
         }
 
-        .parent-link {
-            background: #222;
-            font-weight: bold;
+        .row img {
+            width: 24px;
+            height: 24px;
+            margin-right: 18px;
+        }
+
+        .row .name {
+            font-size: 15px;
+            flex-grow: 1;
+        }
+
+        .parent-dir {
+            background: #111;
+            color: var(--accent);
+            font-weight: 700;
+            border-bottom: 2px solid var(--border);
         }
 
         .footer {
-            padding: 15px;
+            padding: 20px;
             text-align: center;
             font-size: 11px;
-            color: #666;
+            color: var(--text-dim);
+            background: #141414;
+            border-top: 1px solid var(--border);
             text-transform: uppercase;
+            letter-spacing: 2px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="wrapper">
         <div class="header">
             <h1>$title</h1>
         </div>
-        <ul class="file-list">
-            <li class="file-item parent-link">
-                <a href=".."><span>⤴ .. (Parent Directory)</span></a>
-            </li>
+        <div class="list-container">
+            <a href=".." class="row parent-dir">
+                <span>⤴ .. (Parent Directory)</span>
+            </a>
 EOF
 
-    # إضافة الملفات والمجلدات
+    # Generate rows for Directories and Files
     for item in "$dir"/*; do
         local name=$(basename "$item")
-        # تجاهل ملفات النظام والسكربت
+        
+        # Security: Exclude system files and icons from the listing
         if [[ "$name" != "index.html" && "$name" != "generate_indexes.sh" && "$name" != ".git" && "$name" != "folder.png" && "$name" != "deb-file.png" && "$name" != "conf" && "$name" != "db" ]]; then
             if [[ -d "$item" ]]; then
-                echo "            <li class='file-item'><a href='$name/'><img src='$folder_icon' alt='dir'> $name/</a></li>" >> "$dir/index.html"
+                echo "            <a href='$name/' class='row'><img src='$folder_icon' alt='folder'><span class='name'>$name/</span></a>" >> "$dir/index.html"
             else
-                echo "            <li class='file-item'><a href='$name'><img src='$file_icon' alt='file'> $name</a></li>" >> "$dir/index.html"
+                echo "            <a href='$name' class='row'><img src='$file_icon' alt='file'><span class='name'>$name</span></a>" >> "$dir/index.html"
             fi
         fi
     done
 
     cat <<EOF >> "$dir/index.html"
-        </ul>
+        </div>
         <div class="footer">
-            Abunta Project Repository &copy; 2025
+            Abunta OS Repository &bull; Powered by Reprepro &bull; 2025
         </div>
     </div>
 </body>
@@ -146,8 +156,8 @@ EOF
 EOF
 }
 
-# التنفيذ
+# Run the generation process
 export -f generate_index
 find . -type d -not -path '*/.*' -exec bash -c 'generate_index "$0"' {} \;
 
-echo "Index generation complete with Ubuntu font and Orange accents."
+echo "Success: English Repository UI generated with Ubuntu aesthetics."
