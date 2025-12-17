@@ -1,66 +1,153 @@
 #!/bin/bash
 
-# دالة لإنشاء ملف index.html بتصميم احترافي
+# دالة لتوليد ملفات الفهرس بتنسيق احترافي
 generate_index() {
     local dir=$1
-    local title="Abunta Repository - ${dir#./}"
-    local root_path=$(realpath --relative-to="$dir" .)
+    local title="Index of ${dir#./}"
     
-    # تحديد مسار الأيقونات بالنسبة للمجلد الحالي
-    local folder_icon="${root_path}/folder.png"
-    local file_icon="${root_path}/deb-file.png"
+    # حساب المسار النسبي للوصول للأيقونات من أي مجلد فرعي
+    local depth=$(echo "${dir#./}" | tr -cd '/' | wc -c)
+    local rel_path="."
+    if [ "$dir" != "." ]; then
+        rel_path=".."
+        for ((i=1; i<depth; i++)); do rel_path="../$rel_path"; done
+    fi
+
+    # أيقوناتك التي حددتها
+    local folder_icon="${rel_path}/folder.png"
+    local file_icon="${rel_path}/deb-file.png"
 
     cat <<EOF > "$dir/index.html"
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>$title</title>
+    <title>Abunta Repository | $title</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap">
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #1a1a1a; color: #e0e0e0; margin: 0; padding: 20px; }
-        .container { max-width: 900px; margin: auto; background: #2d2d2d; padding: 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
-        h1 { color: #4db8ff; border-bottom: 2px solid #4db8ff; padding-bottom: 10px; font-size: 24px; }
-        ul { list-style: none; padding: 0; }
-        li { display: flex; align-items: center; padding: 10px; border-bottom: 1px solid #3d3d3d; transition: background 0.2s; }
-        li:hover { background: #383838; }
-        a { text-decoration: none; color: #ffffff; flex-grow: 1; display: flex; align-items: center; }
-        img { width: 24px; height: 24px; margin-right: 15px; }
-        .parent { color: #ffcc00; font-weight: bold; }
-        footer { margin-top: 20px; text-align: center; font-size: 12px; color: #888; }
+        :root {
+            --bg-color: #111111;
+            --container-bg: #1a1a1a;
+            --text-color: #eeeeee;
+            --accent-color: #e95420; /* لون أوبونتو البرتقالي المميز */
+            --border-color: #333333;
+            --hover-bg: #262626;
+        }
+
+        body {
+            font-family: 'Ubuntu', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--container-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .header {
+            padding: 20px 30px;
+            background: var(--hover-bg);
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            letter-spacing: 0.5px;
+        }
+
+        .file-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .file-item {
+            border-bottom: 1px solid var(--border-color);
+            transition: background 0.2s ease;
+        }
+
+        .file-item:last-child { border-bottom: none; }
+
+        .file-item:hover {
+            background: var(--hover-bg);
+        }
+
+        .file-item a {
+            display: flex;
+            align-items: center;
+            padding: 12px 30px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 14px;
+        }
+
+        .file-item img {
+            width: 22px;
+            height: 22px;
+            margin-right: 15px;
+        }
+
+        .parent-link {
+            background: #222;
+            font-weight: bold;
+        }
+
+        .footer {
+            padding: 15px;
+            text-align: center;
+            font-size: 11px;
+            color: #666;
+            text-transform: uppercase;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>$title</h1>
-        <ul>
-            <li><a href=".." class="parent">⬅ العودة للمجلد السابق</a></li>
+        <div class="header">
+            <h1>$title</h1>
+        </div>
+        <ul class="file-list">
+            <li class="file-item parent-link">
+                <a href=".."><span>⤴ .. (Parent Directory)</span></a>
+            </li>
 EOF
 
-    # البحث عن المجلدات والملفات
+    # إضافة الملفات والمجلدات
     for item in "$dir"/*; do
         local name=$(basename "$item")
-        # تجاهل الملفات التقنية index و git و السكربت والأيقونات نفسها
-        if [[ "$name" != "index.html" && "$name" != "generate_indexes.sh" && "$name" != ".git" && "$name" != "folder.png" && "$name" != "deb-file.png" ]]; then
+        # تجاهل ملفات النظام والسكربت
+        if [[ "$name" != "index.html" && "$name" != "generate_indexes.sh" && "$name" != ".git" && "$name" != "folder.png" && "$name" != "deb-file.png" && "$name" != "conf" && "$name" != "db" ]]; then
             if [[ -d "$item" ]]; then
-                echo "            <li><a href='$name/'><img src='$folder_icon' alt='dir'> $name/</a></li>" >> "$dir/index.html"
+                echo "            <li class='file-item'><a href='$name/'><img src='$folder_icon' alt='dir'> $name/</a></li>" >> "$dir/index.html"
             else
-                echo "            <li><a href='$name'><img src='$file_icon' alt='file'> $name</a></li>" >> "$dir/index.html"
+                echo "            <li class='file-item'><a href='$name'><img src='$file_icon' alt='file'> $name</a></li>" >> "$dir/index.html"
             fi
         fi
     done
 
     cat <<EOF >> "$dir/index.html"
         </ul>
-        <footer>Abunta Project Repository &copy; 2025</footer>
+        <div class="footer">
+            Abunta Project Repository &copy; 2025
+        </div>
     </div>
 </body>
 </html>
 EOF
 }
 
-# البدء بالمرور على كل المجلدات
+# التنفيذ
 export -f generate_index
 find . -type d -not -path '*/.*' -exec bash -c 'generate_index "$0"' {} \;
 
-echo "تم تحديث الواجهة بنجاح! جرب فتح المجلد في المتصفح الآن."
+echo "Index generation complete with Ubuntu font and Orange accents."
